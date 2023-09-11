@@ -11,8 +11,8 @@ deps:
 	/opt/gerbil/bin/gxpkg install github.com/ober/oberlib
 
 build: deps
-	$(GERBIL_HOME)/bin/gxpkg link $(PROJECT) /src || true
-	$(GERBIL_HOME)/bin/gxpkg build $(PROJECT)
+	/opt/gerbil/bin/gxpkg link $(PROJECT) /src || true
+	/opt/gerbil/bin/gxpkg build $(PROJECT)
 
 linux-static-docker:
 	docker run -it \
